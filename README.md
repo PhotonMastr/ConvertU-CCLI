@@ -4,7 +4,7 @@
 
 
 # ConvertU-CCLI  
-NOTE: THE WINDOWS VERSION IS NOT OUT YET ALONG WITH THE FISH SHELL INSTALLER. APOLOGIES
+
 
 
 A simple CLI converter program written in C
@@ -22,7 +22,7 @@ Index
 
 - It has a wide range of units to convert to and from
 - A very easy to use installer for Linux/MacOS
-- A simple and portable executable file for windows (windows support not yet available in 1.0)
+- A simple and portable executable file for windows 
 - Free and Open Source Software (FOSS). You are free to distribute the code in any way you want, modify it, or do practically whatever you want to it as outlined in the GPL3 licence.
 - Extremely useful for day to day use. 
 
