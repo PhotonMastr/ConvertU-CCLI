@@ -11,7 +11,6 @@ https://github.com/PhotonMastr/
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
 #include "ConvertU-CCLI.h"
 void mass(int massArg) {
   clrscr;
