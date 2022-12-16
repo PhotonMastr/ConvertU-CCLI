@@ -4,6 +4,7 @@
 
 
 # ConvertU-CCLI  
+NOTE: THE WINDOWS VERSION IS NOT OUT YET ALONG WITH THE FISH SHELL INSTALLER. APOLOGIES
 A simple CLI converter program written in C
 -------------------------------------------------------------------------------------------------------------------
 
