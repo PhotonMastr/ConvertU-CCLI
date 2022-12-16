@@ -9,12 +9,9 @@ by Tristan
 https://github.com/PhotonMastr/
 */
 
-int bait;
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
 #include "ConvertU-CCLI-Win.h"
-#include "unistd.h"
 void mass(int massArg) {
   clrscr;
   long double massInput;
@@ -32,10 +29,8 @@ void mass(int massArg) {
   long double massTonsOunces = massInput * 32000;
     printf("Converted!\n\n\n");
     printf("Tons to Kilos: %.2Lf\nTons to Grams: %.2Lf\nTons to Milligrams: %.2Lf\nTons to Pounds: %.2Lf\nTons to Ounces: %.2Lf\n", massTonsKilos, massTonsGrams, massTonsMG, massTonsLBS, massTonsOunces);
-    int c = getchar();
-    if (c == '\n') {
-      system("exit");
-    }
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (massArg == 2) {
     printf("Input how many kilograms.\n");
@@ -47,8 +42,8 @@ void mass(int massArg) {
     long double massKilosOunces = massInput * 35.274;
     printf("Converted!\n\n\n");
     printf("Kilos to Tons: %.3Lf\nKilos to Grams: %.2Lf\nKilos to Milligrams: %.2Lf\nKilos to Pounds: %.2Lf\nKilos to Ounces: %.2Lf\n", massKilosTons, massKilosGrams, massKilosMG, massKilosLBS, massKilosOunces);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (massArg == 3) {
     printf("Input how many grams.\n");
@@ -60,8 +55,8 @@ void mass(int massArg) {
     long double massGramsOunces = massInput / 28.35;
     printf("Converted!\n\n\n");
     printf("Grams to Tons: %.6Lf\nGrams to Kilos: %.3Lf\nGrams to Milligrams: %.2Lf\nGrams to Pounds: %.3Lf\nGrams to Ounces: %.2Lf\n", massGramsTons, massGramsKilos, massGramsMG, massGramsLBS, massGramsOunces);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (massArg == 4) {
     printf("Input how many Milligrams\n");
@@ -73,8 +68,8 @@ void mass(int massArg) {
     long double massMGOunces = massInput / 28350.0;
     printf("Converted!\n\n\n");
     printf("Milligrams to Tons: %.9Lf\nMilligrams to Kilos: %.6Lf\nMilligrams to Grams: %.3Lf\nGrams to Pounds: %.6Lf\nGrams to Ounces: %.5Lf", massMGTons, massMGKilos, massMGGrams, massMGPounds, massMGOunces);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (massArg == 5) {
     printf("Input how many Pounds.\n");
@@ -86,8 +81,8 @@ void mass(int massArg) {
     long double massLBSOunces = massInput * 16;
     printf("Converted!\n\n\n");
     printf("Pounds to Tons: %.4Lf\nPounds to Kilos: %.2Lf\nPounds to Grams: %.2Lf\nPounds to Milligrams: %.2Lf\nPounds to Ounces: %.2Lf", massLBSTons, massLBSKilos, massLBSGrams, massLBSMG, massLBSOunces );
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (massArg == 6) {
     printf("input how many Ounces.\n");
@@ -99,12 +94,12 @@ void mass(int massArg) {
     long double massOuncesLBS = massInput / 16.0;
     printf("Converted!\n\n\n");
     printf("Ounces to Tons: %.5Lf\nOunces to Kilos: %.2Lf\nOunces to Grams: %.2Lf\nOunces to Milligrams: %.2Lf\nOunces to Pounds: %.2Lf", massOuncesTons, massOuncesKilos, massOuncesGrams, massOuncesMG, massOuncesLBS);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   } else {
     printf("Invalid input. Please run the program again.");
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
 }
 void storage(int storageArg) {
@@ -123,8 +118,8 @@ void storage(int storageArg) {
     long double storageBtb = storageInput / 1000000000000;
     printf("Converted!\n\n\n");
     printf("Bytes to Kilobytes: %.3Lf\nBytes to Megabytes: %.6Lf\nBytes to Gigabytes: %.9Lf\nBytes to Terabytes: %.12Lf", storageBkb, storageBmb, storageBgb, storageBtb);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
     }
    else if (storageArg == 2) {
     printf("Input how many Kilobytes.\n");
@@ -135,8 +130,8 @@ void storage(int storageArg) {
     long double storageKbTb = storageInput / 1000000000000;
     printf("Converted!\n\n\n");
     printf("Kilobytes to Bytes: %.2Lf\nKilobytes to Megabytes: %.3Lf\nKilobytes to Gigabytes: %.6Lf\nKilobytes to Terabytes: %.12Lf", storageKbB, storageKbMb, storageKbGb, storageKbTb);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
    else if (storageArg == 3) {
     printf("Input how many Megabytes.\n");
@@ -147,8 +142,8 @@ void storage(int storageArg) {
     long double storageMbTb = storageInput / 1000000;
     printf("Converted!\n\n\n");
     printf("Megabytes to Bytes: %.2Lf\nMegabytes to Kilobytes: %.2Lf\nMegabytes to Gigabytes: %.3Lf\nMegabytes to Terabytes: %.6Lf", storageMbB, storageMbKb, storageMbGb, storageMbTb);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   } 
    else if (storageArg == 4) {
     printf("Input how many Gigabytes.\n");
@@ -159,8 +154,8 @@ void storage(int storageArg) {
     long double storageGbTb = storageInput / 1000;
     printf("Converted!\n\n\n");
     printf("Gigabytes to Bytes: %.2Lf\nGigabytes to Kilobytes: %.2Lf\nGigabytes to Megabytes: %.2Lf\nGigabytes to Terabytes: %.3Lf", storageGbB, storageGbKb, storageGbMb, storageGbTb);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
    else if (storageArg == 5) {
     printf("Input how many Terabytes.\n");
@@ -171,12 +166,12 @@ void storage(int storageArg) {
     long double storageTbGb = storageInput * 1000;
     printf("Converted!\n\n\n");
     printf("Terabytes to Bytes: %.2Lf\nTerabytes to Kilobytes: %.2Lf\nTerabytes to Megabytes: %.2Lf\nTerabytes to Gigabytes: %.2Lf", storageTbB, storageTbKb, storageTbMb, storageTbGb);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   } else {
     printf("Invalid input. Please run the program again.");
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
 
 
@@ -199,8 +194,8 @@ void length(int lengthArg) {
     long double lengthFeetInch = lengthInput * 12;
     printf("Converted!\n\n\n");
     printf("Feet to Metres: %.2Lf\nFeet to KM: %.4Lf\nFeet to Millimetres: %.2Lf\nFeet to Centimetres: %.2Lf\nFeet to Yards: %.2Lf\nFeet to Inches: %.2Lf", lengthFeetMetre, lengthFeetKM, lengthFeetMM, lengthFeetCM, lengthFeetYard, lengthFeetInch);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (lengthArg == 2) {
     printf("Input how many Metres.\n");
@@ -213,8 +208,8 @@ void length(int lengthArg) {
     long double lengthMetreInch = lengthInput / 39.37;
     printf("Converted!\n\n\n");
     printf("Metres to Feet: %.2Lf\nMetres to Kilometres: %.3Lf\nMetres to Millimetres: %.2Lf\nMetres to Centimetres: %.2Lf\nMetres to Yards: %.2Lf\nMetres to Inches: %.2Lf", lengthMetreFeet, lengthMetreKM, lengthMetreMM, lengthMetreCM, lengthMetreYard, lengthMetreInch);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (lengthArg == 3) {
     printf("Input how many Kilometres.\n");
@@ -227,8 +222,8 @@ void length(int lengthArg) {
     long double lengthKMInch = lengthInput * 39370;
     printf("Converted!\n\n\n");
     printf("Kilometres to Metres: %.2Lf\nKilometres to Feet: %.2Lf\nKilometres to Millimetres: %.2Lf\nKilometres to Centimetres: %.2Lf\nKilometres to Yards: %.2Lf\nKilometres to Inches: %.2Lf", lengthKMMetre, lengthKMFeet, lengthKMmm, lengthKMcm, lengthKMYard, lengthKMInch);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (lengthArg == 4) {
     printf("Input how many Millimetres.\n");
@@ -241,8 +236,8 @@ void length(int lengthArg) {
     long double lengthMMInch = lengthInput / 25.4;
     printf("Converted!\n\n\n");
     printf("Millimetres to Feet: %.3Lf\nMillimetres to Metres: %.3Lf\nMillimetres to Kilometres: %.6Lf\nMillimetres to Centimetres: %.2Lf\nMillimetres to Yards: %.3Lf\nMillimetres to Inches: %.2Lf", lengthMMFoot, lengthMMMetre, lengthMMKm, lengthMMCm, lengthMMYard, lengthMMInch);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (lengthArg == 5) {
     printf("Input how many Centimetres.\n");
@@ -255,8 +250,8 @@ void length(int lengthArg) {
     long double lengthCMInch = lengthInput / 2.54;
     printf("Converted!\n\n\n");
     printf("Centimetres to Feet: %.2Lf\nCentimetres to Metres: %.2Lf\nCentimetres to Kilometres: %.6Lf\nCentimetres to Millimetres: %.2Lf\nCentimetres to Yards: %.2Lf\nCentimetres to Inches: %.2Lf", lengthCMFoot, lengthCMMetre, lengthCMKm, lengthCMMM, lengthCMYard, lengthCMFoot);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (lengthArg == 6) {
     printf("Input how many Yards.\n");
@@ -269,8 +264,8 @@ void length(int lengthArg) {
     long double lengthYardInch = lengthInput * 36;
     printf("Converted!\n\n\n");
     printf("Yards to feet: %.2Lf\nYards to Metres: %.2Lf\nYards to Kilometres: %.4Lf\nYards to Millimetres: %.2Lf\nYards to Centimetres: %.2Lf\nYards to Inches: %.2Lf", lengthYardFoot, lengthYardMetre, lengthYardKm, lengthYardMM, lengthYardCM, lengthYardInch);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (lengthArg == 7) {
     printf("Input how many Inches.\n");
@@ -283,12 +278,12 @@ void length(int lengthArg) {
     long double lengthInchYard = lengthInput / 36;
     printf("Converted!\n\n\n");
     printf("Inches to Feet: %.2Lf\nInches to Metres: %.2Lf\nInches to Kilometres: %.5Lf\nInches to Millimetres: %.2Lf\nInches to Centimetres: %.2Lf\nInches to Yards: %.2Lf", lengthInchFoot, lengthInchMetre, lengthInchKM, lengthInchMM, lengthInchCM, lengthInchYard);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   } else {
     printf("Invalid input. Please run the program again.");
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
 
 }
@@ -309,8 +304,8 @@ void speed(int speedArg) {
     long double speedMPHKnots = speedInput / 1.151;
     printf("Converted!\n\n\n");
     printf("Miles Per Hour to Kilometres Per Hour: %.2Lf\nMiles Per Hour to Feet Per Second: %.2Lf\nMiles Per Hour to Metres Per Second: %.2Lf\nMiles Per Hour to Knots: %.2Lf", speedMPHkph, speedMPHfps, speedMPHmps, speedMPHKnots);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (speedArg == 2) {
     printf("Input how many Kilometres Per Hour.\n");
@@ -321,8 +316,8 @@ void speed(int speedArg) {
     long double speedKPHknots = speedInput / 1.852;
     printf("Converted!\n\n\n");
     printf("Kilometres Per Hour to Miles Per Hour: %.2Lf\nKilometres Per Hour to Feet Per Second: %.2Lf\nKilometres Per Hour to Metres Per Second: %.2Lf\nKilometres Per Hour to Knots: %.2Lf", speedKPHmph, speedKPHfps, speedKPHmps, speedKPHknots);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (speedArg == 3) {
     printf("Input how many Feet Per Second.\n");
@@ -333,8 +328,8 @@ void speed(int speedArg) {
     long double speedFPSknots = speedInput / 1.688;
     printf("Converted!\n\n\n");
     printf("Feet Per Second to Miles Per Hour: %.2Lf\nFeet Per Second to Kilometres Per Hour: %.2Lf\nFeet Per Second to Metres Per Second: %.2Lf\nFeet Per Second to Knots: %.2Lf", speedFPSmph, speedFPSkph, speedFPSmps, speedFPSknots);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (speedArg == 4) {
     printf("Input how many Metres Per Second.\n");
@@ -345,8 +340,8 @@ void speed(int speedArg) {
     long double speedMPSKnot = speedInput * 1.944;
     printf("Converted!\n\n\n");
     printf("Metres Per Second to Miles Per Hour: %.2Lf\nMetres Per Second to Kilometres Per Hour: %.2Lf\nMetres Per Second to Feet Per Second: %.2Lf\nMetres Per Second to Knots: %.2Lf", speedMPSmph, speedMPSkph, speedMPSfps, speedMPSKnot);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (speedArg == 5) {
     printf("Input how many Knots.\n");
@@ -357,12 +352,12 @@ void speed(int speedArg) {
     long double speedKnotMPS = speedInput / 1.944;
     printf("Converted!\n\n\n");
     printf("Knots to Miles Per Hour: %.2Lf\nKnots to Kilometres Per Hour: %.2Lf\nKnots to Feet Per Second: %.2Lf\nKnots to Metres Per Second: %.2Lf", speedKnotMPH, speedKnotKPH, speedKnotFPS, speedKnotMPS);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   } else {
     printf("Invalid input. Please run the program again.");
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
 
 }
@@ -380,8 +375,8 @@ void temp(int tempArg) {
     long double tempCelciusKelvin = tempInput + 273.15;
     printf("Converted!\n\n\n");
     printf("Celcius to Fahrenheit: %.2Lf\nCelcius to Kelvin: %.2Lf", tempCelciusFahrenheit, tempCelciusKelvin);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (tempArg == 2) {
     printf("Input how many Fahrenheit.\n");
@@ -390,8 +385,8 @@ void temp(int tempArg) {
     long double tempFahrenheitKelvin = tempInput + 459.67 * 0.5556;
     printf("Converted!\n\n\n");
     printf("Fahrenheit to Celcius: %.2Lf\nFahrenheit to Kelvin: %.2Lf", tempFahrenheitCelcius, tempFahrenheitKelvin);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (tempArg == 3) {
     printf("Input how many Kelvin.\n");
@@ -400,12 +395,12 @@ void temp(int tempArg) {
     long double tempKelvinFahrenheit = tempInput - 273.15 * 1.8 + 32;
     printf("Converted!\n\n\n");
     printf("Kelvin to Celcius: %.2Lf\nKelvin to Fahrenheit: %.2Lf", tempKelvinCelcius, tempKelvinFahrenheit);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   } else {
     printf("Invalid input. Please run the program again.");
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
 
 }
@@ -424,8 +419,8 @@ void frequency (int freqArg) {
     long double freqHertzGigahertz = freqInput / 1000000000;
     printf("Converted!\n\n\n");
     printf("Hertz to Kilohertz: %.3Lf\nHertz to Megahertz: %.6Lf\nHertz to Gigahertz: %.9Lf", freqHertzKilohertz, freqHertzMegahertz, freqHertzGigahertz);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (freqArg == 2) {
     printf("Input how many Kilohertz.\n");
@@ -435,8 +430,8 @@ void frequency (int freqArg) {
     long double freqKilohertzGigahertz = freqInput / 1000000;
     printf("Converted!\n\n\n");
     printf("Kilohertz to Hertz: %.2Lf\nKilohertz to Megahertz: %.3Lf\nKilohertz to Gigahertz: %.6Lf", freqKilohertzHertz, freqKilohertzMegahertz, freqKilohertzGigahertz);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (freqArg == 3) {
     printf("Input how many Megahertz.\n");
@@ -446,8 +441,8 @@ void frequency (int freqArg) {
     long double freqMegahertzGigahertz = freqInput / 1000;
     printf("Converted!\n\n\n");
     printf("Megahertz to Hertz: %.2Lf\nMegahertz to Kilohertz: %.2Lf\nMegahertz to Gigahertz: %.3Lf", freqMegahertzHertz, freqMegahertzKilohertz, freqMegahertzGigahertz);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (freqArg == 4) {
     printf("Input how many Gigahertz.\n");
@@ -457,12 +452,12 @@ void frequency (int freqArg) {
     long double freqGigahertzMegahertz = freqInput * 1000;
     printf("Converted!\n\n\n");
     printf("Gigahertz to Hertz: %.2Lf\nGigahertz to Kilohertz: %.2Lf\nGigahertz to Megahertz: %.2Lf", freqGigahertzHertz, freqGigahertzKilohertz, freqGigahertzMegahertz);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   } else {
     printf("Invalid input. Please run the program again.");
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
 
 }
@@ -485,8 +480,8 @@ void area(int areaArg) {
     long double squareKMAcre = areaInput * 247.1;
     printf("Converted!\n\n\n");
     printf("Square Kilometres to Square Metres: %.2Lf\nSquare Kilometres to Square Miles: %.2Lf\nSquare Kilometres to Square Yards: %.2Lf\nSquare Kilometres to Square Feet: %.2Lf\nSquare Kilometres to Square Inches: %.2Lf\nSquare Kilometres to Hectares: %.2Lf\nSquare Kilometres to Acres: %.2Lf", squareKMSquareM, squareKMSquareMi, squareKMSquareYard, squareKMSquareFoot, squareKMSquareInch, squareKMHectare, squareKMAcre);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (areaArg == 2) {
     printf("Input how many Square Metres.\n");
@@ -500,8 +495,8 @@ void area(int areaArg) {
     long double squareMAcre = areaInput / 4047;
     printf("Converted!\n\n\n");
     printf("Square Metres to Square Kilometres: %.6Lf\nSquare Metres to Square Miles: %.7Lf\nSquare Metres to Square Yards: %.2Lf\nSquare Meters to Square Feet: %.2Lf\nSquare Metres to Square Inches: %.2Lf\nSquare Metres to Hectares: %.4Lf\nSquare Metres to Acres: %.4Lf", squareMSquareKM, squareMSquareMi, squareMSquareYard, squareMSquareFoot, squareMSquareInch, squareMHectare, squareMAcre);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (areaArg == 3) {
     printf("Input how many Square Miles.\n");
@@ -515,8 +510,8 @@ void area(int areaArg) {
     long double squareMiAcre = areaInput * 640;
     printf("Converted!\n\n\n");
     printf("Square Miles to Square Kilometres: %.2Lf\nSquare Miles to Square Metres: %.2Lf\nSquare Miles to Square Yards: %.2Lf\nSquare Miles to Square Feet: %.2Lf\nSquare Miles to Square Inches: %.2Lf\nSquare Miles to Hectares: %.2Lf\nSquare Miles to Acres: %.2Lf", squareMiSquareKM, squareMiSquareM, squareMiSquareYard, squareMiSquareFoot, squareMiSquareInch, squareMiHectare, squareMiAcre);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (areaArg == 4) {
     printf("Input how many Square Yards.\n"); 
@@ -530,8 +525,8 @@ void area(int areaArg) {
     long double squareYardAcre = areaInput / 4840; 
     printf("Converted!\n\n\n");
     printf("Square Yards to Square Kilometres: %.2Lf\nSquare Yards to Square Metres: %.2Lf\nSquare Yards to Square Miles: %.7Lf\nSquare Yards to Square Feet: %.2Lf\nSquare Yards to Square Inches: %.2Lf\nSquare Yards to Hectares: %.2Lf\nSquare Yards to Acres: %.4Lf", squareYardSquareKM, squareYardSquareM, squareYardSquareMi, squareYardSquareFoot, squareYardSquareInch, squareYardHectare, squareYardAcre);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (areaArg == 5) {
     printf("Input how many Square Feet.\n");
@@ -545,8 +540,8 @@ void area(int areaArg) {
     long double squareFootAcre = areaInput / 43560;
     printf("Converted!\n\n\n");
     printf("Square Feet to Square Kilometres: %.8Lf\nSquare Feet to Square Metres: %.2Lf\nSquare Feet to Square Miles: %.8Lf\nSquare Feet to Square Yards: %.2Lf\nSquare Feet to Square Inches: %.2Lf\nSquare Feet to Hectares: %.6Lf\nSquare Feet to Acres: %.5Lf", squareFootSquareKM, squareFootSquareM, squareFootSquareMi, squareFootSquareYard, squareFootSquareInch, squareFootHectare, squareFootAcre);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   } 
   else if (areaArg == 6) {
     printf("Input how many Square Inches.\n");
@@ -560,8 +555,8 @@ void area(int areaArg) {
     long double squareInchAcre = areaInput / 6273000;
     printf("Converted!\n\n\n");
     printf("Square Inch to Square Kilometres: %.10Lf\nSquare Inch to Square Metres: %.4Lf\nSquare Inch to Square Miles: %.10Lf\nSquare Inch to Square Yard: %.4Lf\nSquare Inch to Square Feet: %.2Lf\nSquare Inch to Hectare: %.8Lf\nSquare Inch to Acre: %.7Lf", squareInchSquareKm, squareInchSquareM, squareInchSquareMi, squareInchSquareYard, squareInchSquareFoot, squareInchHectare, squareInchAcre);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (areaArg == 7) {
     printf("Input how many Hectares.\n");
@@ -575,8 +570,8 @@ void area(int areaArg) {
     long double hectareAcre = areaInput * 2.471;
     printf("Converted!\n\n\n");
     printf("Hectares to Square Kilometres: %.2Lf\nHectares to Square Metres: %.2Lf\nHectares to Square Miles: %.3Lf\nHectares to Square Yards: %.2Lf\nHectares to Square Feet: %.2Lf\nHectares to Square Inches: %.2Lf\nHectares to Acres: %.2Lf", hectareSquareKm, hectareSquareM, hectareSquareMi, hectareSquareYard, hectareSquareFoot, hectareSquareInch, hectareAcre);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (areaArg == 8) {
     printf("Input how many Acres.\n");
@@ -590,12 +585,12 @@ void area(int areaArg) {
     long double acreHectare = areaInput / 2.471;
     printf("Converted!\n\n\n");
     printf("Acres to Square Kilometres: %.3Lf\nAcres to Square Metres: %.4Lf\nAcres to Square Miles: %.3Lf\nAcres to Square Yards: %.2Lf\nAcres to Square Feet: %.2Lf\nAcres to Square Inches: %.7Lf\nAcres to Hectares: %.2Lf", acreSquareKM, acreSquareM, acreSquareMi, acreSquareYard, acreSquareFoot, acreSquareInch, acreHectare);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   } else {
     printf("Invalid input. Please run the program again.");
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
 
 }
@@ -615,8 +610,8 @@ void time(int timeArg) {
     long double msD = timeInput / 86400000;
     printf("Converted!\n\n\n");
     printf("Milliseconds to Seconds: %.3Lf\nMilliseconds to Minutes: %.5Lf\nMilliseconds to Hours: %.7Lf\nMilliseconds to Days: %.8Lf", msS, msM, msH, msD);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (timeArg == 2) {
     printf("Input how many Seconds.\n");
@@ -627,8 +622,8 @@ void time(int timeArg) {
     long double sD = timeInput / 86400;
     printf("Converted!\n\n\n");
     printf("Seconds to Milliseconds: %.2Lf\nSeconds to Minutes: %.2Lf\nSeconds to Hours: %.4Lf\nSeconds to Days: %.5Lf", sMs, sM, sH, sD);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (timeArg == 3) {
     printf("Input how many Minutes.\n");
@@ -639,8 +634,8 @@ void time(int timeArg) {
     long double mD = timeInput / 1440;
     printf("Converted!\n\n\n");
     printf("Minutes to Milliseconds: %.2Lf\nMinutes to Seconds: %.2Lf\nMinutes to Hours: %.2Lf\nMinutes to Days: %.4Lf", mMs, mS, mH, mD);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (timeArg == 4) {
     printf("Input how many Hours.\n");
@@ -651,8 +646,8 @@ void time(int timeArg) {
     long double hD = timeInput / 24;
     printf("Converted!\n\n\n");
     printf("Hours to Milliseconds: %.2Lf\nHours to Seconds: %.2Lf\nHours to Minutes: %.2Lf\nHours to Days: %.2Lf", hMs, hS, hM, hD);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
   else if (timeArg == 5) {
     printf("Input how many Days.\n");
@@ -663,12 +658,12 @@ void time(int timeArg) {
     long double dH = timeInput * 24;
     printf("Converted!\n\n\n");
     printf("Days to Milliseconds: %.2Lf\nDays to Seconds: %.2Lf\nDays to Minutes: %.2Lf\nDays to Hours: %.2Lf", dMs, dS, dM, dH);
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   } else {
     printf("Invalid input. Please run the program again.");
-    printf("Input anything to close.");
-    scanf("%d", &bait);
+    setbuf(stdin, NULL);
+    getchar();
   }
 
 }
