@@ -80,7 +80,7 @@ and then
 It will tell you when it is installed. Now that it is installed you can run 
 
 ```sh
-ConvertUCCLI
+convertuccli
 ```
 
 And that's it for MacOS/Linux
@@ -89,7 +89,7 @@ And that's it for MacOS/Linux
 ## Windows 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Windows_logo_-_2012.png/800px-Windows_logo_-_2012.png" alt="linux" width="40" height="40"/>
 Go to the <a href="https://github.com/PhotonMastr/ConvertU-CLI/releases">Releases Page</a>
-Click on the text ConvertU-CLI-[version here]-Windows.exe
+Click on the text ConvertU-CLI-[version here]-Win.exe
 And it should download a file in your Downloads folder. I'm sure if you've used windows before... you know the drill. Double click the file and it just works. Keep in mind that windows might give you a warning that it's a virus. It's not. You can hit more info and run anyway.
 
 
