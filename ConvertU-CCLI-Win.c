@@ -22,11 +22,11 @@ void mass(int massArg) {
   if (massArg == 1) {
     printf("Input how many tons.\n");
     scanf("%Lf", &massInput);
-  long double massTonsKilos = massInput * 907.2;
-  long double massTonsGrams = massInput * 907200;
-  long double massTonsMG = massInput * 970200000;
-  long double massTonsLBS = massInput * 2000;
-  long double massTonsOunces = massInput * 32000;
+    long double massTonsKilos = massInput * 907.2;
+    long double massTonsGrams = massInput * 907200;
+    long double massTonsMG = massInput * 970200000;
+    long double massTonsLBS = massInput * 2000;
+    long double massTonsOunces = massInput * 32000;
     printf("Converted!\n\n\n");
     printf("Tons to Kilos: %.2Lf\nTons to Grams: %.2Lf\nTons to Milligrams: %.2Lf\nTons to Pounds: %.2Lf\nTons to Ounces: %.2Lf\n", massTonsKilos, massTonsGrams, massTonsMG, massTonsLBS, massTonsOunces);
     setbuf(stdin, NULL);
